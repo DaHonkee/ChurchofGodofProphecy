@@ -4,16 +4,25 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
     <title>About Us - Church of God, South Carolina</title>
     <link rel="stylesheet" href="colors4all.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
-
+<style>
+    #containerbanner {
+    background-image: url('images/pictureofchurch.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: none;
+    background-size: cover;
+}
+</style>
 <body>
     <div id="navbar-containter"></div> 
 
     <section class="hero sky-animation"> 
-        <div class="hero-body">
+        <div class="hero-body"  id="containerbanner">
             <div class="container">
                 <h1 class="title has-text-white has-text-centered">About Us</h1>
                 <h2 class="subtitle has-text-white has-text-centered">A Small Church of God in South Carolina</h2>
@@ -50,7 +59,7 @@
     </section>
 
     <footer class="footer">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered has-text-black">
             <p>&copy; 20XX Church of God, South Carolina</p>
         </div>
     </footer>
