@@ -7,23 +7,40 @@
     <link rel="stylesheet" href="colors4all.css">
     <title>Live Stream - Church of God</title>
 </head>
+<style>
+    #livestreambanner {
+        background-image: url('images/crosspic.WEBP');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        animation: none;
+        background-size: cover;
+    }
+    #livestreambackground {
+        background-image: url('images/cross.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        animation: none;
+        background-size: cover;
+    }
 
+</style>
 <body>
-    <div id="navbar-containter"></div> 
-    <section id="main-livestream" class="section" style="background-color: #333;">
-        <div class="container">
-            <div class="video-container has-text-centered">
+
+    <div id="navbar-containter"></div>
+            <div class="video-container has-text-centered"id="livestreambackground">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/BxY_eJLBflk?si=LXeu32QxQZKnxcHy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <header class="hero"> <!-- Apply Bulma classes for styling the header -->
+        <header class="hero" ><!-- Apply Bulma classes for styling the header -->
             <div class="content has-text-centered">
                 <h1 class="title has-text-white">Weekly Sermon</h1>
             </div>
         </header>
-        <main class="section"> <!-- Apply Bulma classes for styling the main content -->
-            <article class="box"> <!-- Apply Bulma classes for styling the article -->
-                <div class="content has-text-centered">
+        <main class="section" id="background-color">
+            <!-- Apply Bulma classes for styling the main content -->
+            <article class="box" id="livestreambackground">
+                <!-- Apply Bulma classes for styling the article -->
+                <div class="content has-text-white">
+
                 <h2 class="title is-4">Week of [Replace with Date]</h2>
-                <h3 class="subtitle is-6">[Replace with Sermon notes and details]</h3>
                 <p>Bible Quotes and References</p>
                 <p>Description: [Replace with Message from the Pastor]</p>
   
@@ -33,7 +50,7 @@
     </body>
 
     <footer class="footer">
-        <div class="content has-text-centered">
+        <div class="content has-text-black">
             <p>&copy; 20XX Church of God of Prophecy</p>
         </div>
     </footer>

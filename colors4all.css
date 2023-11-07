@@ -64,3 +64,10 @@
   font-weight: 350;
   font-size: x-large;
 }
+.background-color{
+  color:lightslategrey;
+}
+
+#border-color{
+  border-color: lightslategrey;
+}
