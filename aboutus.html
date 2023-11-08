@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -11,12 +10,24 @@
 </head>
 <style>
     #containerbanner {
-    background-image: url('images/starrybackground.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    animation: none;
-    background-size: cover;
-}
+        background-image: url('images/current/about.JPEG');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        animation: none;
+        background-size: cover;
+        height:100vh;
+    }
+    #otherbanner{
+        background-color: rgba(255,255,255,0.7);
+        padding: 2rem;
+    }
+    .content {
+        color: black;
+    }
+
+    .container {
+        padding: 1.75rem;
+    }
 </style>
 <body>
     <div id="navbar-containter"></div> 
@@ -27,11 +38,7 @@
                 <h1 class="title has-text-white has-text-centered">About Us</h1>
                 <h2 class="subtitle has-text-white has-text-centered">A Small Church of God in South Carolina</h2>
             </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
+        <div class="container" id="otherbanner">
             <p class="content">
                 Welcome to our small Church of God in South Carolina. We are a close-knit community of believers dedicated to serving our local area with faith, love, and hope.
             </p>
@@ -56,6 +63,8 @@
                 Thank you for considering our Church of God in South Carolina as your place of worship. We look forward to meeting you and welcoming you into our church family.
             </p>
         </div>
+                </div>
+
     </section>
 
     <footer class="footer">
