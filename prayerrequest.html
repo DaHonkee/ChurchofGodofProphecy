@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="colors4all.css">
 </head>
+
 <style>
     .heading-background {
         background-color: #9eb2ff;
     }
 
-     #prayerbackground {
-         background-image: url('images/mothermary.png');
-         background-repeat: no-repeat;
-         background-attachment: fixed;
-         animation: none;
-         background-size: cover;
-     }
+    #prayerbackground {
+        background-image: url('images/mothermary.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        animation: none;
+        background-size: cover;
+    }
 </style>
+
 <body>
 <div id="navbar-containter"></div>
-<section class="section sparkles" id="prayerbackground" >
+<section class="section sparkles" id="prayerbackground">
     <div class="container">
         <h1 class="title has-text-white">Send a Prayer Request</h1>
-        <form action="https://formspree.io/dakodahh92@gmail.com" method="POST">
+        <form id="prayerForm" name="prayerForm">
             <div class="field">
                 <label class="label">Your Name</label>
                 <div class="control">
-                    <input class="input" type="text" name="name" placeholder="Your Name" required>
+                    <input class="input" type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
             </div>
             <div class="field">
                 <label class="label">Email</label>
                 <div class="control">
-                    <input class="input" type="email" name="_replyto" placeholder="Your Email" required>
+                    <input class="input" type="email" id="email" name="email" placeholder="Your Email" required>
                 </div>
             </div>
             <div class="field">
                 <label class="label">Prayer Request</label>
                 <div class="control">
-                    <textarea class="textarea" name="message" placeholder="Your Prayer Request" required></textarea>
+                    <textarea class="textarea" id="request" name="request" placeholder="Your Prayer Request" required></textarea>
                 </div>
             </div>
             <div class="field is-grouped">
@@ -53,7 +56,28 @@
         </form>
     </div>
 </section>
+
+<!-- Include Email.js script and configure it -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    emailjs.init("h3KFTkjzWrKemM3ht"); // Replace with your Email.js user ID
+
+    document.getElementById("prayerForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("Prayer Requests", "template_l67vk93", '#prayerForm')
+            .then(function (response) {
+                console.log("Prayer request sent successfully", response);
+                // You can show a success message to the user or redirect them to a thank you page.
+            }, function (error) {
+                console.error("Failed to send prayer request", error);
+                // Handle errors or show an error message to the user.
+            });
+    });
+</script>
+
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="navbar.js"></script>
 </body>
+
 </html>
