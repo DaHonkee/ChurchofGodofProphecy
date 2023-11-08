@@ -22,31 +22,35 @@
         animation: none;
         background-size: cover;
     }
-
+.card{
+    background-color: rgba(255,255,255,0.7)!important;
+}
+}
 </style>
 <body>
     <div id="navbar-containter"></div>
             <div class="video-container has-text-centered"id="livestreambackground">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/BxY_eJLBflk?si=LXeu32QxQZKnxcHy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="content has-text-centered">
                     <h1 class="title has-text-white">Weekly Sermon</h1>
                 </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BxY_eJLBflk?si=LXeu32QxQZKnxcHy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
         <header class="hero" ><!-- Apply Bulma classes for styling the header -->
 
         </header>
-        <main class="section" id="background-color">
+        <main class="section" id="livestreambackground">
             <!-- Apply Bulma classes for styling the main content -->
-            <article class="box" id="livestreambackground">
+            <article class="card">
                 <!-- Apply Bulma classes for styling the article -->
-                <div class="content has-text-white">
+                <div class="card-content has-text-black">
 
                 <h2 class="title is-4">Week of [Replace with Date]</h2>
                 <p>Bible Quotes and References</p>
                 <p>Description: [Replace with Message from the Pastor]</p>
-  
+                </div>
             </article>
         </main>
-      
+
     </body>
 
     <footer class="footer">

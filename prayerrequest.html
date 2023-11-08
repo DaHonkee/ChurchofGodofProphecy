@@ -19,28 +19,30 @@
         animation: none;
         background-size: cover;
     }
+
+    .container{
+        height: 100vh;
+    }
 </style>
 
 <body>
 <div id="navbar-containter"></div>
-<section class="section sparkles" id="prayerbackground">
+
+<section class="section" id="prayerbackground">
     <div class="container">
         <h1 class="title has-text-white">Send a Prayer Request</h1>
         <form id="prayerForm" name="prayerForm">
             <div class="field">
-                <label class="label">Your Name</label>
                 <div class="control">
                     <input class="input" type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
             </div>
             <div class="field">
-                <label class="label">Email</label>
                 <div class="control">
                     <input class="input" type="email" id="email" name="email" placeholder="Your Email" required>
                 </div>
             </div>
             <div class="field">
-                <label class="label">Prayer Request</label>
                 <div class="control">
                     <textarea class="textarea" id="request" name="request" placeholder="Your Prayer Request" required></textarea>
                 </div>
@@ -55,6 +57,7 @@
             </div>
         </form>
     </div>
+
 </section>
 
 <!-- Include Email.js script and configure it -->
@@ -68,12 +71,14 @@
         emailjs.sendForm("Prayer Requests", "template_l67vk93", '#prayerForm')
             .then(function (response) {
                 console.log("Prayer request sent successfully", response);
+                alert("Your prayers being sent to the Lord");
                 // You can show a success message to the user or redirect them to a thank you page.
             }, function (error) {
                 console.error("Failed to send prayer request", error);
                 // Handle errors or show an error message to the user.
             });
     });
+
 </script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
