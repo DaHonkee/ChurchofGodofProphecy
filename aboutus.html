@@ -1,79 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-    <title>About Us - Church of God, South Carolina</title>
     <link rel="stylesheet" href="colors4all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <title>About Us - Church of God, South Carolina</title>
+
+    <style>
+        #containerbanner {
+            background-image: url('images/current/about.JPEG');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 10vh;
+        }
+
+        #containerbackground2 {
+            background-image: url('images/sunset.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        #otherbanner {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+        }
+
+        .content {
+            color: black;
+        }
+
+        #section2 {
+            padding: 1.75rem;
+            background-color: rgba(255, 255, 255, .4);
+        }
+
+        /* New styles for the card layout */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            margin: 1rem;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .mission-section {
+            padding: 2rem;
+            text-align: center;
+            color: white; /* Change color to match your design */
+        }
+
+        .mission-statement {
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
-<style>
-    #containerbanner {
-        background-image: url('images/current/about.JPEG');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 10vh;
-    }
-    #otherbanner{
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 2rem;
-    }
-    .content {
-        color: black;
-    }
-    #section2 {
-        padding: 1.75rem;
-        background-color: rgba(255, 255, 255, .4);
-    }
-</style>
+
 <body>
 <div id="navbar-containter"></div>
 
-<section class="hero is-primary is-halfheight" id="containerbanner">
+
+
+<section class="hero is-info is-halfheight" id="containerbackground2">
     <div class="hero-body">
-        <div class="container">
-            <h1 class="title has-text-white has-text-centered">About Us</h1>
-            <h2 class="subtitle has-text-white has-text-centered">A Small Church of God in South Carolina</h2>
+        <div class="container mission-section">
+            <!-- Mission Statement -->
+            <h3 class="title is-3 has-text-white">Our Mission</h3>
+            <p class="mission-statement">
+                Write your compelling mission statement here.
+            </p>
         </div>
     </div>
 </section>
 
-<section class="" id="otherbanner">
-    <div class="section" id="section2">
-        <p class="content">
-            Welcome to our small Church of God in South Carolina. We are a close-knit community of believers dedicated to serving our local area with faith, love, and hope.
-        </p>
+<section class="section" id="otherbanner">
+    <div class="card-container">
+        <!-- Card 1: Church Information -->
+        <div class="card">
+            <div class="card-content">
+                <h3 class="title is-4 has-text-black">Church of God of Prophecy</h3>
+                <p class="content">
+                    Address: 340 McAurthur Street, Woodruff, SC 29388<br>
+                    Phone: (864) XXX-XXXX<br>
+                    Website: <a href="http://www.woodruffCOGOP.org" target="_blank">www.woodruffCOGOP.org</a>
+                </p>
+            </div>
+        </div>
 
-        <p class="content">
-            At the heart of our church is a commitment to worship, fellowship, and spreading the teachings of Jesus Christ. We believe in the power of faith, the importance of community, and the transformative impact of love.
-        </p>
-
-        <p class="content">
-            Our doors are always open, and we welcome people from all walks of life to join us in our spiritual journey. Whether you're new to faith or a long-time believer, you'll find a warm and welcoming community here in South Carolina.
-        </p>
-
-        <p class="content">
-            We offer a range of services, events, and ministries to meet the spiritual needs of our congregation and our local community. Please explore our website to learn more about our activities and how you can get involved.
-        </p>
-
-        <p class="content">
-            If you have any questions or would like to visit us in person, please don't hesitate to contact us. We're here to serve and support you on your spiritual journey.
-        </p>
-
-        <p class="content">
-            Thank you for considering our Church of God in South Carolina as your place of worship. We look forward to meeting you and welcoming you into our church family.
-        </p>
+        <!-- Card 2: Soup Kitchen Information -->
+        <div class="card">
+            <div class="card-content">
+                <h3 class="title is-4 has-text-black">Soup Kitchen</h3>
+                <p class="content">
+                    Address: 340 McArthur Street, Woodruff, SC 29388<br>
+                    Phone: (864) 476-3589<br>
+                    Website: <a href="http://www.woodruffsoupkitchen.com/contact.html" target="_blank">www.woodruffsoupkitchen.com</a>
+                </p>
+            </div>
+        </div>
     </div>
 </section>
+
 <footer class="footer">
     <div class="content has-text-centered has-text-black">
         <p>&copy; 20XX Church of God of Prophecy</p>
     </div>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="navbar.js"></script>
 </body>
+
 </html>
