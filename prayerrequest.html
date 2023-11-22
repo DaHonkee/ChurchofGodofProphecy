@@ -72,7 +72,7 @@
     document.getElementById("prayerForm").addEventListener("submit", function (event) {
         event.preventDefault();
 
-        emailjs.sendForm("Prayer Requests", "template_l67vk93", '#prayerForm')
+        emailjs.sendForm("service_mzi3hcr","template_l67vk93", '#prayerForm')
             .then(function (response) {
                 console.log("Prayer request sent successfully", response);
                 alert("Your prayers being sent to the Lord");
