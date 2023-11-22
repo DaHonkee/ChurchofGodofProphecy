@@ -1,7 +1,7 @@
 // Compose email
 const mailOptions = {
     from: 'your-email@gmail.com',
-    to: 'dakodahh92@gmail.com',
+    to: 'mail@woodruffcogop.com',
     subject: 'Prayer Requests',
     text: 'This is a test email from Church of God'
 };
