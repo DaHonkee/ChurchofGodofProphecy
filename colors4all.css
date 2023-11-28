@@ -1,72 +1,80 @@
-.sky-animation {
+.sky-animation{
     background: linear-gradient(135deg, #87CEEB, #4682B4,#87CEEB);
     animation: skyAnimation 20s linear infinite;
     background-size: 400% 400%;
   }
   
-  @keyframes skyAnimation {
-    0%, 100% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
+@keyframes skyAnimation{
+  0%, 100% {
+    background-position: 0 0;
   }
-  
-  .heading-background {
-    background-color: #9eb2ff;
+  50% {
+    background-position: 100% 100%;
   }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    animation: none;
-  }
-  
-  @keyframes backgroundAnimation {
-    0%, 100% {
-      background: linear-gradient(135deg, #45a7e8 0%, #4b9cb4 33%, #91b8d4 66%, #88bfe4 100%);
-    }
-    50% {
-      background: linear-gradient(135deg, #88bfe4 0%, #91b8d4 33%, #4b9cb4 66%, #45a7e8 100%);
-    }
-  }
-  
-  .sparkles {
-    animation: backgroundAnimation 20s linear infinite;
-    transform: translate3d(0, 0, 0); /* force hardware acceleration */
+}
 
-  }
-  
+.heading-background{
+  background-color: #9eb2ff;
+}
 
-  #main-livestream {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+body{
+  margin: 0;
+  padding: 0;
+  animation: none;
+}
 
-  .navbar-item {
-    color:white;
+@keyframes backgroundAnimation{
+  0%, 100% {
+    background: linear-gradient(135deg, #45a7e8 0%, #4b9cb4 33%, #91b8d4 66%, #88bfe4 100%);
   }
+  50% {
+    background: linear-gradient(135deg, #88bfe4 0%, #91b8d4 33%, #4b9cb4 66%, #45a7e8 100%);
+  }
+}
 
-.navbar-dropdown a{
-  color:black
+.sparkles{
+  background-color: #1d1e1e;
+  color: white !important;
+  width: 100vw !important;
+  /*animation: backgroundAnimation 20s linear infinite;*/
+  /*transform: translate3d(0, 0, 0); !* force hardware acceleration *!*/
+}
+
+#main-livestream{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar-item{
+  color:dodgerblue;
+}
+
+.navbar-dropdown a, .navbar-start a{
+  color:dodgerblue;
 }
 
 .navbar-linkbackground{
   color:dimgrey;
 }
+
 #morebutton:hover{
-  color:black!important
+  color:black !important
 }
+
 .content{
   color:antiquewhite;
   font-weight: 350;
   font-size: x-large;
 }
+
 .background-color{
   color:lightslategrey;
 }
 
 #border-color{
   border-color: lightslategrey;
+}
+
+.subtitle {
+  color: #FFAA00 !important;
 }
