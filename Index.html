@@ -1,86 +1,98 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Woodruff Church of God of Prophecy</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="colors4all.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="main.js" defer></script>
 </head>
-
-<style>
-    .card{
-       background-color:  rgba(30, 30, 30, 0.75)
-
-    }
-    html{
-        background-color: rgba(0,0,0,0) !important;
-    }
-
-    body{
-        background-image: url('images/original/sunset.png');
-        background-repeat: no-repeat;
-        background-attachment:fixed;
-        animation: none;
-        background-size: 100% 100%;
-        height:100vw
-    }
-
-    .column{
-        width:60vw;
-        margin:auto;
-    }
-
-    .container {
-        text-align: center;
-    }
-</style>
-
 <body>
-<div id="navbar-containter"></div>
-<section class="hero">
-    <div class="hero-body">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
-            <img src="woodruff-gold-transparent-with-cross.svg">
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container" id="container2">
-        <div class="columns is-centered">
-            <div class="column is-4">
-                <div class="card has-text-white">
-                    <div class="card-content">
-                        <p class="title has-text-white">Upcoming Events</p>
-                        <p>Dec 17th, Potato soup dinner after Sunday evening service with desserts! Bring your loved ones for the fellowship!</p>
-                    </div>
-                </div>
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="woodruff-gold-transparent-with-cross.svg" alt="Woodruff Church Logo" height="28">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-
-            <div class="column is-4">
-                <div class="card has-text-white">
-                    <div class="card-content">
-                        <p class="title has-text-white">Coming Soon</p>
-                        <p>View sermons from your phone or anywhere with livestream! Coming soon!</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column is-4">
-                <div class="card has-text-white">
-                    <div class="card-content">
-                        <p class="title has-text-white">Past Events</p>
-                        <p>The church had a wonderful time picking music, and we were blessed to have everyone come and join us in worship!</p>
-                    </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#home">Home</a>
+                    <a class="navbar-item" href="#events">Events</a>
+                    <a class="navbar-item" href="#about">About</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<script src="navbar.js"></script>
+    <section id="home" class="hero is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <img src="woodruff-gold-transparent-with-cross.svg" alt="Woodruff Church Logo" class="animate-fade-in hero-logo">
+                <h1 class="title is-1 has-text-white animate-slide-up">Welcome to Woodruff Church</h1>
+                <h2 class="subtitle has-text-white animate-slide-up">Church of God of Prophecy</h2>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered has-text-white mb-6">Upcoming Events</h2>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <div class="card animate-on-scroll hover-effect">
+                        <div class="card-content">
+                            <p class="title is-4 has-text-white">Potato Soup Dinner</p>
+                            <p class="has-text-white">Dec 17th, join us after Sunday evening service for a delicious potato soup dinner with desserts! Bring your loved ones for fellowship!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card animate-on-scroll hover-effect">
+                        <div class="card-content">
+                            <p class="title is-4 has-text-white">Livestream Coming Soon</p>
+                            <p class="has-text-white">Soon you'll be able to view sermons from your phone or anywhere with our new livestream feature! Stay tuned for updates.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card animate-on-scroll hover-effect">
+                        <div class="card-content">
+                            <p class="title is-4 has-text-white">Music Selection Success</p>
+                            <p class="has-text-white">We had a wonderful time picking music for our services. Thank you to everyone who came and joined us in worship!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="content has-text-centered animate-on-scroll">
+                <h2 class="title is-2 has-text-white">About Us</h2>
+                <p class="has-text-white is-size-5">Woodruff Church of God of Prophecy is a welcoming community dedicated to spreading the love of Christ. We believe in fostering a strong, supportive fellowship where everyone can grow in their faith journey. Join us in worship, prayer, and community service as we strive to make a positive impact in our local area and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-dark">
+        <div class="content has-text-centered">
+            <p class="has-text-white">
+                &copy; 2023 Woodruff Church of God of Prophecy. All rights reserved.
+            </p>
+        </div>
+    </footer>
 </body>
-
 </html>

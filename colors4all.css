@@ -1,80 +1,250 @@
-.sky-animation{
-    background: linear-gradient(135deg, #87CEEB, #4682B4,#87CEEB);
-    animation: skyAnimation 20s linear infinite;
-    background-size: 400% 400%;
-  }
-  
-@keyframes skyAnimation{
-  0%, 100% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/original/sunset.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #F0F0F0;
 }
 
-.heading-background{
-  background-color: #9eb2ff;
+/* Typography */
+.title, .subtitle {
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-body{
-  margin: 0;
-  padding: 0;
-  animation: none;
-}
-
-@keyframes backgroundAnimation{
-  0%, 100% {
-    background: linear-gradient(135deg, #45a7e8 0%, #4b9cb4 33%, #91b8d4 66%, #88bfe4 100%);
-  }
-  50% {
-    background: linear-gradient(135deg, #88bfe4 0%, #91b8d4 33%, #4b9cb4 66%, #45a7e8 100%);
-  }
-}
-
-.sparkles{
-  background-color: #1d1e1e;
-  color: white !important;
-  width: 100vw !important;
-  /*animation: backgroundAnimation 20s linear infinite;*/
-  /*transform: translate3d(0, 0, 0); !* force hardware acceleration *!*/
-}
-
-#main-livestream{
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.navbar-item{
-  color:dodgerblue;
-}
-
-.navbar-dropdown a, .navbar-start a{
-  color:dodgerblue;
-}
-
-.navbar-linkbackground{
-  color:dimgrey;
-}
-
-#morebutton:hover{
-  color:black !important
-}
-
-.content{
-  color:antiquewhite;
-  font-weight: 350;
-  font-size: x-large;
-}
-
-.background-color{
-  color:lightslategrey;
-}
-
-#border-color{
-  border-color: lightslategrey;
+.title {
+    color: #FFD700 !important;
 }
 
 .subtitle {
-  color: #FFAA00 !important;
+    color: #FFA500 !important;
+}
+
+.content {
+    font-weight: 350;
+    font-size: 1.1rem;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(30, 30, 30, 0.9);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scroll {
+    background-color: rgba(30, 30, 30, 0.95);
+}
+
+.navbar-item, .navbar-link {
+    color: #FFD700;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar-item:hover, .navbar-link:hover {
+    color: #FFA500;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar-burger {
+    color: #FFD700;
+}
+
+.navbar-menu {
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+/* Card styles */
+.card {
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    height: 100%;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-body {
+    padding: 3rem 1.5rem;
+}
+
+.hero-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+    color: #FFD700;
+    font-size: 2rem;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.scroll-indicator.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* Section styles */
+.section {
+    padding: 3rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Footer styles */
+.footer {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+    padding: 3rem 1.5rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 215, 0, 0.7);
+    color: #1a1a1a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(255, 215, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.scroll-to-top.show {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .column {
+        padding: 0.75rem;
+    }
+    
+    .title.is-1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .title.is-2 {
+        font-size: 2rem !important;
+    }
+    
+    .subtitle {
+        font-size: 1.25rem !important;
+    }
+
+    .hero-logo {
+        max-width: 100px;
+    }
+
+    .navbar-menu {
+        background-color: rgba(30, 30, 30, 0.95);
+    }
+}
+
+/* Maintain some existing styles */
+.sky-animation {
+    background: linear-gradient(135deg, #87CEEB, #4682B4, #87CEEB);
+    animation: skyAnimation 20s linear infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes skyAnimation {
+    0%, 100% { background-position: 0 0; }
+    50% { background-position: 100% 100%; }
+}
+
+#main-livestream {
+    padding-left: 0px;
+    padding-right: 0px;
 }
