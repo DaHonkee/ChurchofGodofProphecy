@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="colors4all.css">
+    <title>Live Stream - Church of God</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+
+<style>
+    #livestreambackground {
+        background-image: url('images/current/cross.JPEG');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        animation: none;
+        background-size: cover;
+    }
+    .card {
+        background-color: rgba(255,255,255,0.9)!important;
+        width: 80vw;
+        margin: auto;
+        padding: 50px
+    }
+
+    iframe {
+        width: 60vw;
+        height: 40vh;
+
+    }
+</style>
+
+<body>
+<div id="navbar-containter"></div>
+
+<main class="section" id="livestreambackground">
+    <article class="card">
+        <div class="content">
+            <div class="video-container has-text-centered">
+                <div class="content has-text-centered">
+                    <h1 class="title has-text-black">Weekly Sermon</h1>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RP9UAXMjym4?si=66vdOJae3zVpvfGF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+            <div class="sermoncontent has-text-black">
+
+            <h2>Bible Notes</h2>
+            <p>Romans 13:8-14, I Peter 5:5-11</p>
+
+        </div>
+
+    </article>
+</main>
+<footer class="footer">
+    <div class="content has-text-centered has-text-black">
+        <p>&copy; 2023 Church of God of Prophecy</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="navbar.js"></script>
+</body>
+
+</html>
